@@ -41,5 +41,29 @@ class AQUILA_THEME
             'flex-height' => true,
             'flex-width' => true,
         ]);
+        add_theme_support('custom-background', [
+            'default-color' => '#fff',
+            'default-image' => '',
+            'default-repeat' => 'no-repeat',
+        ]);
+        add_theme_support('post-thumbnails');
+        add_theme_support('customize-selective-refresh-widgets');
+        add_theme_support('automatic-feed-links');
+        add_theme_support('html5', [
+            'search-form',
+            'comment-form',
+            'comment-list',
+            'gallery',
+            'caption',
+            'style',
+            'script',
+        ]);
+        add_editor_style();
+        add_theme_support('wp-block-styles');
+        add_theme_support('align-wide');
+        global $content_width;
+        if (!isset($content_width)) {
+            $content_width = 1240;
+        }
     }
 }
